@@ -1,5 +1,7 @@
 import cv2
 import os
+import json
+import numpy as np
 
 
 def extract_frames(video_path:str, output_folder="extracted_frames"):
@@ -24,6 +26,10 @@ def extract_frames(video_path:str, output_folder="extracted_frames"):
       # If ret is False, the video has ended
       if not ret:
           break
+
+      gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+      mean_luma = np.mean(gray)
+      frame_luminance.append(mean_luma)
     
       # Save the frame as an image file
       frame_filename = os.path.join(output_folder, f"frame_{frame_count:04d}.jpg")
