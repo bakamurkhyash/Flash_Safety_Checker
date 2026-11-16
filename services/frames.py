@@ -3,7 +3,7 @@ import os
 import json
 import numpy as np
 
-
+#listen ro me, create a dictionary and store the frame path alongside all if uts details 
 def extract_frames(video_path:str, output_folder="extracted_frames"):
 
   # Create output directory if it doesn't exist
