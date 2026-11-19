@@ -29,12 +29,12 @@ def extract_frames(video_path:str, output_folder="extracted_frames"):
           break
 
       gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-      mean_luma = np.mean(gray)
+      mean_luma = np.mean(gray). 
       frame_luminance.append(mean_luma)
     
       # Save the frame as an image file
       frame_filename = os.path.join(output_folder, f"frame_{frame_count:04d}.jpg")
-      cv2.imwrite(frame_filename, frame)
+      cv2.imwrite(frame_filename, frame). 
       frame_paths.append(output_folder+"/"+frame_filename)
     
       frame_count += 1
