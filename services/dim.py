@@ -18,7 +18,7 @@ def main():
     ap.add_argument("--window", type=float, default=1.0, help="baseline window in seconds (--auto)")
     a = ap.parse_args()
 
-    cap = cv2.VideoCapture(a.video)
+    cap = cv2.VideoCapture(a.video)#
     if not cap.isOpened():
         raise SystemExit("Cannot open video")
     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
