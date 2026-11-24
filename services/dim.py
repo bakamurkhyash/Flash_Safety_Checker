@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 
 
-def main():
+def dim():
     ap = argparse.ArgumentParser()
     ap.add_argument("video")
     ap.add_argument("csv")
@@ -66,6 +66,3 @@ def main():
     print(f"Done: {dimmed} of {idx} frames dimmed -> {a.out}")
     print(f"Add audio: ffmpeg -i {a.out} -i {a.video} -map 0:v -map 1:a? -c copy final.mp4")
 
-
-if __name__ == "__main__":
-    main()
