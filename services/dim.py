@@ -4,6 +4,7 @@ from collections import deque
 
 import cv2
 import numpy as np
+import cv2
 
 
 def dim():
@@ -45,7 +46,7 @@ def dim():
         if not ok:
             break
 
-        if idx <= total and mask[idx]:
+        elif idx <= total and mask[idx]:
             if a.auto and baseline:
                 small = cv2.resize(frame, small_size, interpolation=cv2.INTER_AREA)
                 lum = float(cv2.cvtColor(small, cv2.COLOR_BGR2GRAY).mean())
