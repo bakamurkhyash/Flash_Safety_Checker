@@ -64,6 +64,7 @@ def dim():
 
     cap.release()
     out.release()
+    
     print(f"Done: {dimmed} of {idx} frames dimmed -> {a.out}")
     print(f"Add audio: ffmpeg -i {a.out} -i {a.video} -map 0:v -map 1:a? -c copy final.mp4")
 
