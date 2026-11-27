@@ -1,11 +1,8 @@
-
 import argparse, csv
 from collections import deque
-
 import cv2
 import numpy as np
 import cv2
-
 
 def dim():
     ap = argparse.ArgumentParser()
