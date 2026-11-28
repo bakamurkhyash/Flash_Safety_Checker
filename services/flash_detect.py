@@ -1,9 +1,8 @@
 import argparse, csv
 from collections import deque
-
 import cv2
 import numpy as np
-
+import tqdm
 
 def main():
     ap = argparse.ArgumentParser()
